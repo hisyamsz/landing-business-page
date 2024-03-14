@@ -16,6 +16,8 @@
     --fwregular: 400;
     --fwlight: 300;
     --transition: all .3s ease;
+    --shadow-box: 1px 4px 10px -1px rgba(0, 0, 0, 0.3);
+    --shadow-text: 1px 1px 1px rgba(1, 1, 1, 0.2);
 }
 
 *::selection {
@@ -35,6 +37,7 @@ body {
     color: var(--navy);
     font-size: 3rem;
     margin: 0;
+    text-shadow: var(--shadow-text);
 }
 
 .medium-header {
@@ -42,6 +45,7 @@ body {
     color: var(--navy);
     font-size: 1.8rem;
     margin: 0;
+    text-shadow: var(--shadow-text);
 }
 
 .small-header {
@@ -49,6 +53,7 @@ body {
     color: var(--navy);
     font-size: 1.4rem;
     margin: 0;
+    text-shadow: var(--shadow-text);
 }
 
 .primary-copy {
@@ -67,12 +72,14 @@ body {
     color: var(--white);
     border-radius: 50px;
     border: none;
+    box-shadow: var(--shadow-box);
 }
 
 .btn-primary:hover {
     background-color: var(--navy);
     color: var(--white) !important;
     transition: var(--transition);
+    box-shadow: var(--shadow-box);
 }
 
 .btn-secondary {
@@ -83,16 +90,19 @@ body {
     color: var(--navy);
     border-radius: 50px;
     border: none;
+    box-shadow: var(--shadow-box);
 }
 
 .btn-secondary:hover {
     background-color: var(--navy);
     color: var(--white) !important;
     transition: var(--transition);
+    box-shadow: var(--shadow-box);
 }
 
 .navbar {
     --bs-navbar-padding-y: 0;
+    min-height: 80px;
 }
 
 .my-navbar {
@@ -100,18 +110,21 @@ body {
     background-color: var(--white);
     border-bottom-left-radius: 26px;
     border-bottom-right-radius: 26px;
+    box-shadow: var(--shadow-box);
 }
 
 .navbar-brand {
     font-weight: var(--fwbold);
     font-size: 1.8rem;
     color: var(--navy);
+    text-shadow: var(--shadow-text);
 }
 
 .navbar-brand:hover {
     color: var(--blue);
     font-weight: var(--fwextrabold);
     transition: var(--transition);
+    text-shadow: var(--shadow-text);
 }
 
 .navbar-nav .nav-item a:hover {
@@ -153,12 +166,14 @@ body {
     border-radius: 20px;
     font-weight: var(--fwsemibold);
     font-size: 0.9rem;
+    box-shadow: var(--shadow-box);
 }
 
 .header-img {
     background-color: var(--white);
     border-radius: 24px;
     padding: 1rem;
+    box-shadow: var(--shadow-box);
 }
 
 .header-img img {
@@ -218,13 +233,16 @@ body {
 .card-brand img {
     height: 50px;
     margin-top: 30px;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.025));
 }
 
-.big-feature-card, .smalll-feature-card {
+.big-feature-card,
+.smalll-feature-card {
     padding: 40px 30px 60px;
     background-color: var(--white);
     border-radius: 16px;
     cursor: pointer;
+    box-shadow: var(--shadow-box);
 }
 
 .features-wrapper:hover .big-feature-card:not(:hover) {
@@ -256,6 +274,7 @@ body {
     height: 100px;
     margin-right: 10px;
 }
+
 .features .features-wrapper .smalll-feature-card .icon img {
     width: 50px;
     height: 50px;
@@ -276,11 +295,18 @@ body {
     color: var(--navy);
 }
 
+.booking>.row.mt-5 .row {
+    padding: 2rem;
+    border-radius: 26px;
+    box-shadow: var(--shadow-box);
+}
+
 .booking-form textarea {
     resize: none;
 }
 
-.form-control, .form-select {
+.form-control,
+.form-select {
     padding: 12px 20px;
     border-radius: 50px;
     background-color: var(--white);
@@ -300,6 +326,7 @@ body {
 .footer a {
     color: var(--gray);
 }
+
 .footer a:hover {
     color: var(--blue);
 }
@@ -308,18 +335,18 @@ body {
     body {
         font-size: 75%;
     }
-    
+
     .header {
         text-align: center;
         margin-top: 60px;
     }
-    
+
     .text-end {
         text-align: left !important;
         margin-top: 1rem;
     }
-    
-    .features .features-wrapper .icon  {
+
+    .features .features-wrapper .icon {
         float: right;
         height: 60px;
     }
